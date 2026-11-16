@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>3D Interactive Portfolio Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="heading">
+      <h1>3D Interactive Portfolio Book</h1>
+      <p>Turn the pages to explore the portfolio</p>
+    </header>
+
+    <section class="book-stage" aria-label="Interactive portfolio book">
+      <div class="book" id="book">
+        <div class="book-cover"></div>
+
+        <article class="page page-1" data-page="1">
+          <div class="front cover-front">
+            <span class="cover-kicker">CREATIVE PORTFOLIO</span>
+            <h2>PORTFOLIO</h2>
+            <p>Interactive Designer</p>
+            <span class="cover-year">2026</span>
+          </div>
+          <div class="back">
+            <span class="eyebrow">01 / INTRODUCTION</span>
+            <h2>Welcome</h2>
+            <p>A little collection of ideas, skills and digital experiences.</p>
+            <p class="muted">Turn the page to meet the designer.</p>
+          </div>
+        </article>
+
+        <article class="page page-2" data-page="2">
+          <div class="front">
+            <span class="eyebrow">02 / ABOUT ME</span>
+            <h2>Hello! 👋</h2>
+            <p>I'm a UI/UX designer and Front-end developer specializing in modern, interactive user experiences that drive engagement.</p>
+            <a class="primary-link" href="#contact">Download Resume</a>
+          </div>
+          <div class="back">
+            <span class="eyebrow">03 / EXPERTISE</span>
+            <h2>My Approach</h2>
+            <p>I combine thoughtful design, accessible interfaces and purposeful motion to make digital products feel clear and intuitive.</p>
+          </div>
+        </article>
+
+        <article class="page page-3" data-page="3">
+          <div class="front">
+            <span class="eyebrow">04 / CAPABILITIES</span>
+            <h2>Technical Skills</h2>
+            <div class="skill"><div><span>HTML &amp; CSS</span><b>95%</b></div><i><span style="width:95%"></span></i></div>
+            <div class="skill"><div><span>JavaScript &amp; React</span><b>80%</b></div><i><span style="width:80%"></span></i></div>
+            <div class="skill"><div><span>UI/UX Design (Figma)</span><b>90%</b></div><i><span style="width:90%"></span></i></div>
+            <div class="skill"><div><span>3D Animation</span><b>65%</b></div><i><span style="width:65%"></span></i></div>
+          </div>
+          <div class="back">
+            <span class="eyebrow">05 / WHAT I DO</span>
+            <h2>Services</h2>
+            <div class="service"><h3>Web Development</h3><p>Building responsive, fast, and accessible websites using modern frameworks.</p></div>
+            <div class="service"><h3>Interface Design</h3><p>Crafting intuitive layouts and visually stunning interfaces for web and mobile.</p></div>
+          </div>
+        </article>
+
+        <article class="page page-4" data-page="4">
+          <div class="front" id="contact">
+            <span class="eyebrow">06 / LET'S TALK</span>
+            <h2>Get In Touch</h2>
+            <form id="contactForm">
+              <input name="name" placeholder="Your Name" aria-label="Your Name" required>
+              <input name="email" type="email" placeholder="Your Email" aria-label="Your Email" required>
+              <textarea name="message" placeholder="Your Message..." aria-label="Your Message" required></textarea>
+              <button class="primary-link" type="submit">Send Message</button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="back final-back">
+            <span class="eyebrow">THANK YOU</span>
+            <h2>The End</h2>
+            <p>Thanks for taking the time to explore my portfolio.</p>
+            <p class="muted">Let's create something meaningful together.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <nav class="book-controls" aria-label="Book controls">
+      <button type="button" id="prevBtn" disabled>← Previous</button>
+      <span id="pageCounter">Cover · 1 / 4</span>
+      <button type="button" id="nextBtn">Next →</button>
+    </nav>
+    <p class="hint">Use the buttons, arrow keys, or click the right page to turn</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
